@@ -31,6 +31,7 @@ const buildControls = props => {
             removed={() => props.ingredientRemoved(control.type)}
             key={control.type}
             label={control.label}
+            number={props.ingredients[control.type]}
           />
         );
       })}
