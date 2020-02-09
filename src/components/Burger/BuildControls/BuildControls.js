@@ -35,6 +35,7 @@ const buildControls = props => {
           />
         );
       })}
+      <p>Total Price: {props.price}</p>
     </div>
   );
 };
