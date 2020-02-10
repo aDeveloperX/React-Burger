@@ -12,7 +12,7 @@ const buildControl = props => {
       >
         Less
       </button>
-      <p1>{props.number}</p1>
+      <p>{props.number}</p>
       <button className={classes.More} onClick={props.added}>
         more
       </button>
