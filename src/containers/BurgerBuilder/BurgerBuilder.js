@@ -13,9 +13,9 @@ class BurgerBuilder extends Component {
   state = {
     ingredients: {
       salad: 1,
-      bacon: 2,
+      bacon: 1,
       cheese: 1,
-      meat: 3
+      meat: 1
     },
     totalPrice: 4
   };
@@ -51,6 +51,13 @@ class BurgerBuilder extends Component {
   };
 
   render() {
+    const disabledInfo = {
+      ...this.state.ingredients
+    };
+    for (let key in disabledInfo) {
+      disabledInfo[key] = this.state.ingredients[key] <= 0;
+    }
+
     return (
       <>
         <Burger ingredients={this.state.ingredients}></Burger>
@@ -59,6 +66,7 @@ class BurgerBuilder extends Component {
           ingredientRemoved={this.removeIngredientHandler}
           ingredients={this.state.ingredients}
           price={this.state.totalPrice}
+          disabled={disabledInfo}
         ></BuildControls>
       </>
     );

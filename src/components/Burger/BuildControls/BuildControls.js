@@ -32,6 +32,7 @@ const buildControls = props => {
             key={control.type}
             label={control.label}
             number={props.ingredients[control.type]}
+            disabled={props.disabled[control.type]}
           />
         );
       })}
