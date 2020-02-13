@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Button from "../../UI/Button/Button";
 
 class OrderSummary extends Component {
-  //for debugging purpose
+  //for debugging purposes
   componentWillUpdate() {
     console.log("it will update");
   }
